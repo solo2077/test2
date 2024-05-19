@@ -1,0 +1,40 @@
+<template>
+    <div><h1 style="color: red;">橘公司VS葵关南</h1></div>
+    <div class="showbox1">
+        <ul v-for="a in list":key="a.id">
+            <li>
+                {{ a.name+":"+a.book }} <button type="button" @click="Run(a.id)">删除</button><br>
+            </li>
+        </ul>
+
+    </div>
+ 
+
+</template>
+<script>
+export default{
+    data(){
+        return{
+            list:[
+                {id:1,name:"葵关南",book:"碧阳学生会议事录-学生会的一己之见"},
+                {id:2,name:"橘公司",book:"约会大作战"},
+                {id:3,name:"葵关南",book:"电玩咖"},
+                {id:4,name:"橘公司",book:"极彩的魔女"},
+                {id:5,name:"葵关南",book:"我的勇者"},
+            ]
+        }
+    },
+    methods:{
+        Run(c){
+            this.list=this.list.filter(a => a.id !==c)
+        }
+    }
+}
+
+</script>
+
+
+
+<style>
+
+</style>

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-container {
+    background-color: white;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 10px;
+    min-width: 1200px;
+    width: 90%;
+}
+
+.input-tip {
+    margin: 0 auto;
+    line-height: 40px;
+    vertical-align: 100%;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100px
+}
+
+.input-tip2 {
+    margin: 0 auto;
+    margin-right: 0;
+    margin-left: 2%;
+    width: 100px
+}
+
+.input-field {
+    margin-right: 2%;
+    width: 300px;
+    padding: 0;
+    text-align: left;
+}
+
+#input-field2 {
+    margin-right: 2%;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.content-row {
+    margin-bottom: 20px;
+}
+
+.a {
+    color: red;
+}

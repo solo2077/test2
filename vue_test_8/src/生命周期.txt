@@ -1,0 +1,54 @@
+<template>
+  <div>
+    <p>当前计数: {{ count }}</p>
+    <button @click="incrementCount">增加</button>
+  </div>
+</template>
+
+<script>
+import { ref, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue';
+
+export default {
+  setup() {
+    const count = ref(0);
+
+    const incrementCount = () => {
+      count.value++;
+    };
+
+    onBeforeMount(() => {
+      console.log('组件即将挂载');
+    });
+
+    onMounted(() => {
+      console.log('组件已经挂载');
+      // 在这里可以执行依赖于DOM的操作
+    });
+
+    onBeforeUpdate(() => {
+      console.log('组件即将更新');
+      // 在这里可以取消之前的计时器、动画等
+    });
+
+    onUpdated(() => {
+      console.log('组件已经更新');
+      // 在这里可以执行DOM操作或额外的渲染后逻辑
+    });
+
+    onBeforeUnmount(() => {
+      console.log('组件即将卸载');
+      // 在这里执行清理任务，如取消事件监听器
+    });
+
+    onUnmounted(() => {
+      console.log('组件已经卸载');
+      // 在这里执行最终的清理任务
+    });
+
+    return {
+      count,
+      incrementCount
+    };
+  }
+};
+</script>

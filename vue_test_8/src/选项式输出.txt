@@ -1,0 +1,54 @@
+ <template>
+<div id="title">
+  <h1>选项时输出</h1>
+</div>
+
+<div id="show">
+    <select  id="select1" @change="Run">
+      <option v-for="(a,index) in DD":key="a.id">
+        {{ a.name }}
+      </option>
+      
+    </select>
+    <br>
+     <p>{{txt}}</p> 
+  
+   
+
+</div>
+   
+</template>
+<script>
+   export default{
+    data(){
+      return{
+        txt:"",
+        DD:[
+          {id:1,name:"璐璐",gra:"0.1"},
+          {id:2,name:"白菜",gra:"0.01"},
+          {id:3,name:"紫",gra:"0.001"},
+        ]
+      }
+    },
+    methods:{
+      Run(event){
+      this.txt=this.DD[event.target.selectedIndex-1].gra;
+      alert("752");
+
+    }
+    }
+   
+   }
+
+
+</script>
+
+
+<style>
+
+
+</style>
+
+
+
+  
