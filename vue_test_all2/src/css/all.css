@@ -1,0 +1,131 @@
+  /*  * {
+       margin: 0;
+       padding: 0;
+   } */
+  
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .btton {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+  }
+  
+  .tip {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(76, 77, 73, 0.938);
+  }
+  
+  .tip_select {
+      width: 90px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      margin-left: 10px;
+  }
+  
+  .tip_input {
+      width: 70%;
+      margin-left: 10px;
+      margin-top: 10px;
+  }
+  
+  .tip_home {
+      /*  border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: aqua;
+      background-position: center; */
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  
+  .nav {
+      position: sticky;
+      /*当嵌套达到3层以上时，fixed和absolub，他们的绝对定位就是相对于祖先元素而不是窗口，导致不显示或者没有效果，fixed显示的图层为父组件的图册
+      。祖先元素transform非none时在Iphone6上引起后代fixed/absolute元素的怪异表现所以，当多图层嵌套时，不要用fixed和absolub*/
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+      background: #f5c904;
+      z-index: 100;
+  }
+  
+  .card {
+      width: 100%;
+      height: 254px;
+      padding: .8em;
+      background: #f5f5f5;
+      position: relative;
+      overflow: visible;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      margin: auto;
+  }
+  
+  .card-img {
+      background-color: #ffcaa6;
+      height: 40%;
+      width: 100%;
+      border-radius: .5rem;
+      transition: .3s ease;
+  }
+  
+  .card-info {
+      padding-top: 10%;
+  }
+  
+  svg {
+      width: 20px;
+      height: 20px;
+  }
+  
+  .card-footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+  }
+  /*Text*/
+  
+  .text-title {
+      font-weight: 900;
+      font-size: 1.2em;
+      line-height: 1.5;
+  }
+  
+  .text-body {
+      font-size: .9em;
+      padding-bottom: 10px;
+  }
+  /*Button*/
+  
+  .card-button {
+      border: 1px solid #252525;
+      display: flex;
+      padding: .3em;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: .3s ease-in-out;
+  }
+  /*Hover*/
+  
+  .card-img:hover {
+      transform: translateY(-25%);
+      box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+  }
+  
+  .card-button:hover {
+      border: 1px solid #ffcaa6;
+      background-color: #ffcaa6;
+  }
